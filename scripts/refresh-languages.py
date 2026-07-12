@@ -22,7 +22,6 @@ OTHER = "#6E727B"
 
 WORK = [
     ("pyvolr", "Black-Scholes pricing, Greeks &amp; implied vol &#183; Rust core"),
-    ("farwatch", "E2E-encrypted terminal mirroring for AI coding tools"),
     ("secrets-spotter", "Real-time secret detection &#183; Rust / WASM"),
     ("PINN-DER", "Physics-informed nets with calibrated uncertainty"),
 ]
@@ -78,13 +77,18 @@ def render(segs):
     paths = "\n    ".join(f'<path d="{d}" fill="{c}"/>' for d, c in donut(cx, cy, R, r, segs))
     top_name, top_pct = segs[0]
     langdesc = ", ".join(f"{n} {p} percent" for n, p in segs)
+    worknames = ", ".join(n for n, _ in WORK)
 
+    # centre the work list vertically on the donut (cy=190) whatever the count
     items = ""
+    n_items = len(WORK)
+    step = 74 if n_items <= 3 else 64
+    ys = [round(190 - step * (n_items - 1) / 2 + step * i) for i in range(n_items)]
     for i, (n, d) in enumerate(WORK):
-        y = [90, 154, 218, 282][i]
+        y = ys[i]
         items += f'  <text x="48" y="{y}" font-family="{SERIF}" font-size="19" fill="#E6E3DB">{n}</text>\n'
         items += f'  <text x="48" y="{y + 19}" font-family="{SANS}" font-size="12.5" fill="#868B94">{d}</text>\n'
-        if i < 3:
+        if i < n_items - 1:
             items += f'  <line x1="48" y1="{y + 34}" x2="440" y2="{y + 34}" stroke="#23272E" stroke-width="1"/>\n'
 
     legend = ""
@@ -95,7 +99,7 @@ def render(segs):
                    f'<text x="668" y="{y}" fill="#B9BDC5">{name}</text>'
                    f'<text x="772" y="{y}" text-anchor="end" fill="#7C818B">{pct}%</text>\n')
 
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="800" height="330" viewBox="0 0 800 330" role="img" aria-label="Selected work: pyvolr, farwatch, secrets-spotter, PINN-DER. Languages by commit over the last year: {langdesc}.">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="800" height="330" viewBox="0 0 800 330" role="img" aria-label="Selected work: {worknames}. Languages by commit over the last year: {langdesc}.">
   <rect x="0.75" y="0.75" width="798.5" height="328.5" rx="14" fill="#14161A" stroke="#262A31" stroke-width="1.5"/>
   <text x="48" y="54" font-family="{MONO}" font-size="12" letter-spacing="3.2" fill="#7C818B">SELECTED WORK</text>
 {items}  <line x1="470" y1="40" x2="470" y2="290" stroke="#20242B" stroke-width="1"/>

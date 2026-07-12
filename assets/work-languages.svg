@@ -1,17 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="330" viewBox="0 0 800 330" role="img" aria-label="Selected work: pyvolr, farwatch, secrets-spotter, PINN-DER. Languages by commit over the last year: Rust 52 percent, TypeScript 25 percent, Python 21 percent, Other 2 percent.">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="330" viewBox="0 0 800 330" role="img" aria-label="Selected work: pyvolr, secrets-spotter, PINN-DER. Languages by commit over the last year: Rust 52 percent, TypeScript 25 percent, Python 21 percent, Other 2 percent.">
   <rect x="0.75" y="0.75" width="798.5" height="328.5" rx="14" fill="#14161A" stroke="#262A31" stroke-width="1.5"/>
   <text x="48" y="54" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12" letter-spacing="3.2" fill="#7C818B">SELECTED WORK</text>
-  <text x="48" y="90" font-family="'Iowan Old Style', Palatino, Georgia, serif" font-size="19" fill="#E6E3DB">pyvolr</text>
-  <text x="48" y="109" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" fill="#868B94">Black-Scholes pricing, Greeks &amp; implied vol &#183; Rust core</text>
-  <line x1="48" y1="124" x2="440" y2="124" stroke="#23272E" stroke-width="1"/>
-  <text x="48" y="154" font-family="'Iowan Old Style', Palatino, Georgia, serif" font-size="19" fill="#E6E3DB">farwatch</text>
-  <text x="48" y="173" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" fill="#868B94">E2E-encrypted terminal mirroring for AI coding tools</text>
-  <line x1="48" y1="188" x2="440" y2="188" stroke="#23272E" stroke-width="1"/>
-  <text x="48" y="218" font-family="'Iowan Old Style', Palatino, Georgia, serif" font-size="19" fill="#E6E3DB">secrets-spotter</text>
-  <text x="48" y="237" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" fill="#868B94">Real-time secret detection &#183; Rust / WASM</text>
-  <line x1="48" y1="252" x2="440" y2="252" stroke="#23272E" stroke-width="1"/>
-  <text x="48" y="282" font-family="'Iowan Old Style', Palatino, Georgia, serif" font-size="19" fill="#E6E3DB">PINN-DER</text>
-  <text x="48" y="301" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" fill="#868B94">Physics-informed nets with calibrated uncertainty</text>
+  <text x="48" y="116" font-family="'Iowan Old Style', Palatino, Georgia, serif" font-size="19" fill="#E6E3DB">pyvolr</text>
+  <text x="48" y="135" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" fill="#868B94">Black-Scholes pricing, Greeks &amp; implied vol &#183; Rust core</text>
+  <line x1="48" y1="150" x2="440" y2="150" stroke="#23272E" stroke-width="1"/>
+  <text x="48" y="190" font-family="'Iowan Old Style', Palatino, Georgia, serif" font-size="19" fill="#E6E3DB">secrets-spotter</text>
+  <text x="48" y="209" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" fill="#868B94">Real-time secret detection &#183; Rust / WASM</text>
+  <line x1="48" y1="224" x2="440" y2="224" stroke="#23272E" stroke-width="1"/>
+  <text x="48" y="264" font-family="'Iowan Old Style', Palatino, Georgia, serif" font-size="19" fill="#E6E3DB">PINN-DER</text>
+  <text x="48" y="283" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" fill="#868B94">Physics-informed nets with calibrated uncertainty</text>
   <line x1="470" y1="40" x2="470" y2="290" stroke="#20242B" stroke-width="1"/>
   <text x="502" y="54" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12" letter-spacing="3.2" fill="#7C818B">LANGUAGES &#183; BY COMMIT</text>
   <g>

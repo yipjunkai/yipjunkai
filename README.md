@@ -9,6 +9,6 @@
 
 <img src="assets/hero.svg" width="800" alt="Yip Jun Kai — software developer in San Francisco and Singapore. I build things that need to be fast and correct: a Rust options-pricing engine, encrypted developer tools, and applied ML." />
 
-<img src="assets/work-languages.svg" width="800" alt="Selected work — pyvolr, farwatch, secrets-spotter, PINN-DER — and languages by commit over the last year: Rust 52%, TypeScript 25%, Python 21%, other 2%." />
+<img src="assets/work-languages.svg" width="800" alt="Selected work — pyvolr, secrets-spotter, PINN-DER — and languages by commit over the last year: Rust 52%, TypeScript 25%, Python 21%, other 2%." />
 
 </div>
