@@ -1,0 +1,34 @@
+name: GitHub Profile Summary Cards
+
+# Regenerates the stat cards as static SVGs committed into the repo, so they're
+# served from GitHub's own CDN and never depend on a live (rate-limited) service.
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # once daily at 00:00 UTC
+  workflow_dispatch: # lets you run it on demand from the Actions tab (or `gh workflow run`)
+
+# NOTE: no `push` trigger on purpose. The job commits the generated SVGs back to
+# the repo (AUTO_PUSH), and a push trigger would re-fire the workflow on its own
+# commit -> infinite loop. Schedule + manual dispatch is the safe pattern.
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: generate-github-profile-summary-cards
+    permissions:
+      contents: write # required so the built-in token can push the generated cards
+    steps:
+      - uses: actions/checkout@v4
+      - uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          # Built-in token: zero setup, and its pushes don't re-trigger workflows.
+          # Want private-contribution stats too? Create a PAT (read:user), save it as
+          # a repo secret named SUMMARY_GITHUB_TOKEN, and use it here instead.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          BRANCH_NAME: "main"
+          UTC_OFFSET: 8 # Singapore time (UTC+8) for the "productive time" card
+          EXCLUDE: ""
+          AUTO_PUSH: true
