@@ -1,0 +1,43 @@
+name: Refresh languages donut
+
+# Keeps the "languages by commit" donut in assets/work-languages.svg current.
+# github-profile-summary-cards computes the commit-language data (run with
+# AUTO_PUSH disabled so its ~50 theme folders are never committed); a small
+# script re-renders our styled card from it and commits only that one SVG.
+
+on:
+  schedule:
+    - cron: "0 3 * * 1" # weekly, Monday 03:00 UTC
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compute commit-language data (into workspace, not committed)
+        uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          BRANCH_NAME: "main"
+          AUTO_PUSH: false
+
+      - name: Re-render the styled card
+        run: python3 scripts/refresh-languages.py
+
+      - name: Commit if the donut changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/work-languages.svg
+          if git diff --cached --quiet; then
+            echo "Languages unchanged — nothing to commit."
+          else
+            git commit -m "chore: refresh languages-by-commit donut [skip ci]"
+            git push
+          fi
