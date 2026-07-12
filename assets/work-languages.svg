@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="330" viewBox="0 0 800 330" role="img" aria-label="Selected work: pyvolr, farwatch, secrets-spotter, PINN-DER. Languages by commit over the last year: Rust 52 percent, TypeScript 25 percent, Python 21 percent, other 2 percent. 625 commits and 88 pull requests this year.">
+  <title>Selected work &amp; languages</title>
+  <rect x="0.75" y="0.75" width="798.5" height="328.5" rx="14" fill="#14161A" stroke="#262A31" stroke-width="1.5"/>
+
+  <!-- LEFT: selected work -->
+  <text x="48" y="54" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12" letter-spacing="3.2" fill="#7C818B">SELECTED WORK</text>
+
+  <text x="48" y="90" font-family="'Iowan Old Style', Palatino, Georgia, serif" font-size="19" fill="#E6E3DB">pyvolr</text>
+  <text x="48" y="109" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" fill="#868B94">Black-Scholes pricing, Greeks &amp; implied vol &#183; Rust core</text>
+  <line x1="48" y1="124" x2="440" y2="124" stroke="#23272E" stroke-width="1"/>
+
+  <text x="48" y="154" font-family="'Iowan Old Style', Palatino, Georgia, serif" font-size="19" fill="#E6E3DB">farwatch</text>
+  <text x="48" y="173" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" fill="#868B94">E2E-encrypted terminal mirroring for AI coding tools</text>
+  <line x1="48" y1="188" x2="440" y2="188" stroke="#23272E" stroke-width="1"/>
+
+  <text x="48" y="218" font-family="'Iowan Old Style', Palatino, Georgia, serif" font-size="19" fill="#E6E3DB">secrets-spotter</text>
+  <text x="48" y="237" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" fill="#868B94">Real-time secret detection &#183; Rust / WASM</text>
+  <line x1="48" y1="252" x2="440" y2="252" stroke="#23272E" stroke-width="1"/>
+
+  <text x="48" y="282" font-family="'Iowan Old Style', Palatino, Georgia, serif" font-size="19" fill="#E6E3DB">PINN-DER</text>
+  <text x="48" y="301" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" fill="#868B94">Physics-informed nets with calibrated uncertainty</text>
+
+  <!-- vertical divider -->
+  <line x1="470" y1="40" x2="470" y2="290" stroke="#20242B" stroke-width="1"/>
+
+  <!-- RIGHT: languages -->
+  <text x="502" y="54" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12" letter-spacing="3.2" fill="#7C818B">LANGUAGES &#183; BY COMMIT</text>
+
+  <g transform="translate(560,150)">
+    <path d="M0.0,-54.0A54,54,0,1,1,-6.768,53.574L-4.261,33.732A34,34,0,1,0,0.0,-34.0Z" fill="#E3B341"/>
+    <path d="M-6.768,53.574A54,54,0,0,1,-53.574,-6.768L-33.732,-4.261A34,34,0,0,0,-4.261,33.732Z" fill="#56B6C2"/>
+    <path d="M-53.574,-6.768A54,54,0,0,1,-6.768,-53.574L-4.261,-33.732A34,34,0,0,0,-33.732,-4.261Z" fill="#C98FE8"/>
+    <path d="M-6.768,-53.574A54,54,0,0,1,-0.0,-54.0L-0.0,-34.0A34,34,0,0,0,-4.261,-33.732Z" fill="#6E727B"/>
+    <text x="0" y="-1" text-anchor="middle" font-family="'Iowan Old Style', Palatino, Georgia, serif" font-size="22" fill="#E3B341">52%</text>
+    <text x="0" y="16" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5" letter-spacing="2.5" fill="#7C818B">RUST</text>
+  </g>
+
+  <g font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12.5">
+    <rect x="642" y="113" width="11" height="11" rx="2.5" fill="#E3B341"/>
+    <text x="662" y="123" fill="#B9BDC5">Rust</text><text x="772" y="123" text-anchor="end" fill="#7C818B">52%</text>
+    <rect x="642" y="141" width="11" height="11" rx="2.5" fill="#56B6C2"/>
+    <text x="662" y="151" fill="#B9BDC5">TypeScript</text><text x="772" y="151" text-anchor="end" fill="#7C818B">25%</text>
+    <rect x="642" y="169" width="11" height="11" rx="2.5" fill="#C98FE8"/>
+    <text x="662" y="179" fill="#B9BDC5">Python</text><text x="772" y="179" text-anchor="end" fill="#7C818B">21%</text>
+    <rect x="642" y="197" width="11" height="11" rx="2.5" fill="#6E727B"/>
+    <text x="662" y="207" fill="#B9BDC5">Other</text><text x="772" y="207" text-anchor="end" fill="#7C818B">2%</text>
+  </g>
+
+  <line x1="502" y1="248" x2="756" y2="248" stroke="#23272E" stroke-width="1"/>
+  <text x="502" y="274" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12" fill="#7C818B">625 commits <tspan fill="#7BB765">&#183;</tspan> 88 pull requests</text>
+  <text x="502" y="293" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12" fill="#7C818B">4,440 contributions this year</text>
+</svg>

@@ -1,101 +1,22 @@
 <!--
-  GitHub profile README for github.com/yipjunkai
-  This repo must be named exactly "yipjunkai" for GitHub to render it on your profile.
-  Lines marked "TODO" below are assumptions/placeholders — tweak or delete them.
+  Profile README for github.com/yipjunkai.
+  Editorial design on a dark, terminal-toned ground. GitHub strips CSS from READMEs,
+  so the styled look lives in two committed SVGs under /assets. The figures in the
+  cards are a snapshot — re-run the SVG generation to refresh them.
 -->
 
 <div align="center">
 
-# Hi, I'm Yip Jun Kai 👋
+<img src="assets/hero.svg" width="800" alt="Yip Jun Kai — software developer in San Francisco and Singapore. I build things that need to be fast and correct: a Rust options-pricing engine, encrypted developer tools, and applied ML." />
 
-**Software developer — Rust systems, quant finance & applied ML.**
-Shipping fast, correct software across web, mobile & desktop, from San Francisco 🌉 & Singapore 🇸🇬.
+<img src="assets/work-languages.svg" width="800" alt="Selected work — pyvolr, farwatch, secrets-spotter, PINN-DER — and languages by commit over the last year: Rust 52%, TypeScript 25%, Python 21%, other 2%. 625 commits and 88 pull requests this year." />
 
-<a href="https://yipjunkai.com"><img src="https://img.shields.io/badge/Portfolio-yipjunkai.com-4F46E5?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" /></a>
-<a href="https://www.linkedin.com/in/yipjk/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-<a href="https://x.com/yipjunkai"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="X" /></a>
-<a href="mailto:hello@yipjunkai.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+<br /><br />
 
-</div>
+<sub><b>WORK</b>&nbsp;&nbsp; <a href="https://github.com/yipjunkai/pyvolr">pyvolr</a> &nbsp;&middot;&nbsp; <a href="https://github.com/yipjunkai/farwatch">farwatch</a> &nbsp;&middot;&nbsp; <a href="https://github.com/yipjunkai/secrets-spotter">secrets-spotter</a> &nbsp;&middot;&nbsp; <a href="https://github.com/yipjunkai/PINN-DER">PINN-DER</a></sub>
 
----
+<br />
 
-### 🧭 What I build
+<sub><b>ELSEWHERE</b>&nbsp;&nbsp; <a href="https://yipjunkai.com">yipjunkai.com</a> &nbsp;&middot;&nbsp; <a href="https://github.com/yipjunkai">GitHub</a> &nbsp;&middot;&nbsp; <a href="https://www.linkedin.com/in/yipjk/">LinkedIn</a> &nbsp;&middot;&nbsp; <a href="mailto:hello@yipjunkai.com">hello@yipjunkai.com</a></sub>
 
-- 🦀 **Systems in Rust** — pricing engines, end-to-end encrypted developer tooling, and browser/WASM security
-- 📈 **Quant finance** — options pricing, Greeks & implied volatility ([`pyvolr`](https://github.com/yipjunkai/pyvolr))
-- 🔐 **Applied cryptography & security** — E2E-encrypted transport, real-time secret detection
-- 🧠 **ML research** — physics-informed & uncertainty-aware neural networks
-- 🌐 **Full-stack** across Web, Mobile & Desktop — TypeScript/React on the front, Rust/Python underneath
-
-<!-- TODO: currently at Kipo AI (https://github.com/kipo-ai) — add a line on what you're building there -->
-
----
-
-### 🧰 Tech stack
-
-**Languages**
-
-![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-
-**Systems & performance**
-
-![WebAssembly](https://img.shields.io/badge/WebAssembly-654FF0?style=for-the-badge&logo=webassembly&logoColor=white)
-![PyO3](https://img.shields.io/badge/PyO3%20%2F%20Maturin-000000?style=for-the-badge&logo=rust&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-
-**ML & data**
-
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
-
-**Web & mobile** <!-- TODO: trim anything you don't want to claim -->
-
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-
----
-
-### 🚀 Featured projects
-
-| Project | What it is | Stack |
-| --- | --- | --- |
-| [**pyvolr**](https://github.com/yipjunkai/pyvolr) | Modern Black-Scholes-Merton pricing, Greeks & implied volatility for Python — Rust core, vectorized, a drop-in replacement for the abandoned `py_vollib`. Published on PyPI. | `Rust` · `Python` · `PyO3` |
-| [**farwatch**](https://github.com/yipjunkai/farwatch) | Securely access your AI coding assistant from any device via end-to-end encrypted terminal mirroring — zero-knowledge relay + Flutter app. | `Rust` · `Flutter` · `AES-GCM` |
-| [**secrets-spotter**](https://github.com/yipjunkai/secrets-spotter) | Chrome extension that detects exposed secrets (API keys, tokens, passwords) on pages and in network traffic in real time. | `Rust` · `WASM` |
-| [**PINN-DER**](https://github.com/yipjunkai/PINN-DER) | Physics-Informed Neural Networks + Deep Evidential Regression for calibrated uncertainty estimates. | `Python` · `PyTorch` |
-
----
-
-### 📊 GitHub in numbers
-
-<!--
-  These cards are static SVGs generated by the GitHub Action in
-  .github/workflows/profile-summary-cards.yml and committed to the repo,
-  so they never break from a rate-limited live service.
-  They appear after the Action's first successful run (see setup steps).
--->
-
-<div align="center">
-
-[![GitHub profile summary](./profile-summary-card-output/tokyonight/0-profile-details.svg)](https://github.com/yipjunkai)
-
-![Stats](./profile-summary-card-output/tokyonight/3-stats.svg)
-![Most-used languages](./profile-summary-card-output/tokyonight/2-most-commit-language.svg)
-![Repos per language](./profile-summary-card-output/tokyonight/1-repos-per-language.svg)
-![Productive time](./profile-summary-card-output/tokyonight/4-productive-time.svg)
-
-</div>
-
----
-
-<div align="center">
-  <sub>Let's build something fast and correct — <a href="mailto:hello@yipjunkai.com">hello@yipjunkai.com</a></sub>
 </div>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="240" viewBox="0 0 800 240" role="img" aria-label="Yip Jun Kai, software developer in San Francisco and Singapore. I build things that need to be fast and correct: a Rust options-pricing engine, encrypted developer tools, and applied ML.">
+  <title>Yip Jun Kai — software developer</title>
+  <rect x="0.75" y="0.75" width="798.5" height="238.5" rx="14" fill="#14161A" stroke="#262A31" stroke-width="1.5"/>
+  <text x="48" y="98" font-family="'Iowan Old Style', Palatino, Georgia, 'Times New Roman', serif" font-size="46" font-weight="600" fill="#ECEAE4" letter-spacing="-0.3">Yip Jun Kai</text>
+  <text x="49" y="128" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12.5" letter-spacing="3.2" fill="#7C818B">SOFTWARE DEVELOPER &#183; SAN FRANCISCO &amp; SINGAPORE</text>
+  <text x="48" y="176" font-family="'Iowan Old Style', Palatino, Georgia, 'Times New Roman', serif" font-size="21" fill="#C9CDD4">I build things that need to be <tspan font-style="italic" fill="#E3B341">fast and correct</tspan> &#8212; a Rust</text>
+  <text x="48" y="206" font-family="'Iowan Old Style', Palatino, Georgia, 'Times New Roman', serif" font-size="21" fill="#C9CDD4">options-pricing engine, encrypted dev tools, and applied ML.</text>
+</svg>
