@@ -1,7 +1,7 @@
 <!--
   GitHub profile README for github.com/yipjunkai
   This repo must be named exactly "yipjunkai" for GitHub to render it on your profile.
-  Lines marked  <!-- TODO -->  are assumptions/placeholders — tweak or delete them.
+  Lines marked "TODO" below are assumptions/placeholders — tweak or delete them.
 -->
 
 <div align="center">
