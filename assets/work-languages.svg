@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="330" viewBox="0 0 800 330" role="img" aria-label="Selected work: pyvolr, secrets-spotter, PINN-DER. Languages by commit over the last year: Rust 52 percent, TypeScript 25 percent, Python 21 percent, Other 2 percent.">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="330" viewBox="0 0 800 330" role="img" aria-label="Selected work: pyvolr, secrets-spotter, PINN-DER. Languages by commit over the last year: Rust 51 percent, TypeScript 25 percent, Python 22 percent, Other 2 percent.">
   <rect x="0.75" y="0.75" width="798.5" height="328.5" rx="14" fill="#14161A" stroke="#262A31" stroke-width="1.5"/>
   <text x="48" y="54" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12" letter-spacing="3.2" fill="#7C818B">SELECTED WORK</text>
   <text x="48" y="116" font-family="'Iowan Old Style', Palatino, Georgia, serif" font-size="19" fill="#E6E3DB">pyvolr</text>
@@ -12,17 +12,17 @@
   <line x1="470" y1="40" x2="470" y2="290" stroke="#20242B" stroke-width="1"/>
   <text x="502" y="54" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12" letter-spacing="3.2" fill="#7C818B">LANGUAGES &#183; BY COMMIT</text>
   <g>
-    <path d="M566.0,132.0A58,58,0,1,1,558.731,247.543L561.363,226.708A37,37,0,1,0,566.0,153.0Z" fill="#E3B341"/>
-    <path d="M558.731,247.543A58,58,0,0,1,508.457,182.731L529.292,185.363A37,37,0,0,0,561.363,226.708Z" fill="#56B6C2"/>
-    <path d="M508.457,182.731A58,58,0,0,1,558.731,132.457L561.363,153.292A37,37,0,0,0,529.292,185.363Z" fill="#C98FE8"/>
+    <path d="M566.0,132.0A58,58,0,1,1,562.358,247.886L563.677,226.927A37,37,0,1,0,566.0,153.0Z" fill="#E3B341"/>
+    <path d="M562.358,247.886A58,58,0,0,1,508.114,186.358L529.073,187.677A37,37,0,0,0,563.677,226.927Z" fill="#56B6C2"/>
+    <path d="M508.114,186.358A58,58,0,0,1,558.731,132.457L561.363,153.292A37,37,0,0,0,529.073,187.677Z" fill="#C98FE8"/>
     <path d="M558.731,132.457A58,58,0,0,1,566.0,132.0L566.0,153.0A37,37,0,0,0,561.363,153.292Z" fill="#6E727B"/>
-    <text x="566" y="189" text-anchor="middle" font-family="'Iowan Old Style', Palatino, Georgia, serif" font-size="23" fill="#E3B341">52%</text>
+    <text x="566" y="189" text-anchor="middle" font-family="'Iowan Old Style', Palatino, Georgia, serif" font-size="23" fill="#E3B341">51%</text>
     <text x="566" y="207" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5" letter-spacing="2.5" fill="#7C818B">RUST</text>
   </g>
   <g font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12.5">
-    <rect x="648" y="144" width="11" height="11" rx="2.5" fill="#E3B341"/><text x="668" y="154" fill="#B9BDC5">Rust</text><text x="772" y="154" text-anchor="end" fill="#7C818B">52%</text>
+    <rect x="648" y="144" width="11" height="11" rx="2.5" fill="#E3B341"/><text x="668" y="154" fill="#B9BDC5">Rust</text><text x="772" y="154" text-anchor="end" fill="#7C818B">51%</text>
     <rect x="648" y="170" width="11" height="11" rx="2.5" fill="#56B6C2"/><text x="668" y="180" fill="#B9BDC5">TypeScript</text><text x="772" y="180" text-anchor="end" fill="#7C818B">25%</text>
-    <rect x="648" y="196" width="11" height="11" rx="2.5" fill="#C98FE8"/><text x="668" y="206" fill="#B9BDC5">Python</text><text x="772" y="206" text-anchor="end" fill="#7C818B">21%</text>
+    <rect x="648" y="196" width="11" height="11" rx="2.5" fill="#C98FE8"/><text x="668" y="206" fill="#B9BDC5">Python</text><text x="772" y="206" text-anchor="end" fill="#7C818B">22%</text>
     <rect x="648" y="222" width="11" height="11" rx="2.5" fill="#6E727B"/><text x="668" y="232" fill="#B9BDC5">Other</text><text x="772" y="232" text-anchor="end" fill="#7C818B">2%</text>
   </g>
 </svg>
