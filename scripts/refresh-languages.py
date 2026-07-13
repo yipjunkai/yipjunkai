@@ -14,11 +14,11 @@ import math, re, sys
 CARD_DEFAULT = "profile-summary-card-output/tokyonight/2-most-commit-language.svg"
 OUT = "assets/work-languages.svg"
 
-SERIF = "'Iowan Old Style', Palatino, Georgia, serif"
-MONO = "ui-monospace, 'SF Mono', Menlo, Consolas, monospace"
-SANS = "system-ui, -apple-system, 'Segoe UI', sans-serif"
-PALETTE = ["#E3B341", "#56B6C2", "#C98FE8"]  # top 3
-OTHER = "#6E727B"
+# brand: matches yipjunkai.com — Geist type, near-black ground, rose-to-purple accent
+MONO = "'Geist Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace"
+SANS = "'Geist', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+PALETTE = ["#EE696B", "#C56A9A", "#8A5FA8"]  # top 3: coral -> mauve -> purple
+OTHER = "#4E4A55"
 
 WORK = [
     ("pyvolr", "Black-Scholes pricing, Greeks &amp; implied vol &#183; Rust core"),
@@ -86,28 +86,28 @@ def render(segs):
     ys = [round(190 - step * (n_items - 1) / 2 + step * i) for i in range(n_items)]
     for i, (n, d) in enumerate(WORK):
         y = ys[i]
-        items += f'  <text x="48" y="{y}" font-family="{SERIF}" font-size="19" fill="#E6E3DB">{n}</text>\n'
-        items += f'  <text x="48" y="{y + 19}" font-family="{SANS}" font-size="12.5" fill="#868B94">{d}</text>\n'
+        items += f'  <text x="48" y="{y}" font-family="{SANS}" font-weight="600" font-size="18" fill="#EDEDED">{n}</text>\n'
+        items += f'  <text x="48" y="{y + 19}" font-family="{SANS}" font-size="12.5" fill="#8A8A90">{d}</text>\n'
         if i < n_items - 1:
-            items += f'  <line x1="48" y1="{y + 34}" x2="440" y2="{y + 34}" stroke="#23272E" stroke-width="1"/>\n'
+            items += f'  <line x1="48" y1="{y + 34}" x2="440" y2="{y + 34}" stroke="#221E26" stroke-width="1"/>\n'
 
     legend = ""
     colors = PALETTE + [OTHER]
     for i, (name, pct) in enumerate(segs):
         y = [154, 180, 206, 232][i]
         legend += (f'    <rect x="648" y="{y - 10}" width="11" height="11" rx="2.5" fill="{colors[i]}"/>'
-                   f'<text x="668" y="{y}" fill="#B9BDC5">{name}</text>'
-                   f'<text x="772" y="{y}" text-anchor="end" fill="#7C818B">{pct}%</text>\n')
+                   f'<text x="668" y="{y}" fill="#C9C9CE">{name}</text>'
+                   f'<text x="772" y="{y}" text-anchor="end" fill="#7C7C82">{pct}%</text>\n')
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="800" height="330" viewBox="0 0 800 330" role="img" aria-label="Selected work: {worknames}. Languages by commit over the last year: {langdesc}.">
-  <rect x="0.75" y="0.75" width="798.5" height="328.5" rx="14" fill="#14161A" stroke="#262A31" stroke-width="1.5"/>
-  <text x="48" y="54" font-family="{MONO}" font-size="12" letter-spacing="3.2" fill="#7C818B">SELECTED WORK</text>
-{items}  <line x1="470" y1="40" x2="470" y2="290" stroke="#20242B" stroke-width="1"/>
-  <text x="502" y="54" font-family="{MONO}" font-size="12" letter-spacing="3.2" fill="#7C818B">LANGUAGES &#183; BY COMMIT</text>
+  <rect x="0.75" y="0.75" width="798.5" height="328.5" rx="14" fill="#0A0A0A" stroke="#262229" stroke-width="1.5"/>
+  <text x="48" y="54" font-family="{MONO}" font-size="12" letter-spacing="3.2" fill="#8A8A90">SELECTED WORK</text>
+{items}  <line x1="470" y1="40" x2="470" y2="290" stroke="#221E26" stroke-width="1"/>
+  <text x="502" y="54" font-family="{MONO}" font-size="12" letter-spacing="3.2" fill="#8A8A90">LANGUAGES &#183; BY COMMIT</text>
   <g>
     {paths}
-    <text x="{cx}" y="{cy - 1}" text-anchor="middle" font-family="{SERIF}" font-size="23" fill="#E3B341">{top_pct}%</text>
-    <text x="{cx}" y="{cy + 17}" text-anchor="middle" font-family="{MONO}" font-size="9.5" letter-spacing="2.5" fill="#7C818B">{top_name.upper()}</text>
+    <text x="{cx}" y="{cy - 1}" text-anchor="middle" font-family="{SANS}" font-weight="700" font-size="23" fill="#EE696B">{top_pct}%</text>
+    <text x="{cx}" y="{cy + 17}" text-anchor="middle" font-family="{MONO}" font-size="9.5" letter-spacing="2.5" fill="#8A8A90">{top_name.upper()}</text>
   </g>
   <g font-family="{MONO}" font-size="12.5">
 {legend}  </g>
