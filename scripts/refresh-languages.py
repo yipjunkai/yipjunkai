@@ -29,7 +29,10 @@ WORK = [
 
 def parse_card(text):
     """Return [(language, fraction), ...] from the summary-card SVG."""
-    names = re.findall(r'style="fill: #38bdae;[^"]*">([^<]+)</text>', text)
+    # The card's language labels carry the theme text colour inside their inline
+    # style. Upstream now prefixes that style with a CSS var (e.g. "--gpsc-i: 4; "),
+    # so match the colour anywhere in the attribute rather than anchoring to its start.
+    names = re.findall(r'style="[^"]*fill: #38bdae;[^"]*">([^<]+)</text>', text)
     arcs = re.findall(
         r'M(-?[0-9.eE+-]+),(-?[0-9.eE+-]+)A[0-9.]+,[0-9.]+,[0-9.]+,[01],[01],(-?[0-9.eE+-]+),(-?[0-9.eE+-]+)',
         text,
@@ -117,7 +120,14 @@ def render(segs):
 
 def main():
     card = sys.argv[1] if len(sys.argv) > 1 else CARD_DEFAULT
-    segs = bucket_top3(parse_card(open(card).read()))
+    langs = parse_card(open(card).read())
+    if not langs:
+        # An empty parse would sail through bucket_top3() as a bogus "Other 100%".
+        # Fail loudly instead so CI skips the commit and leaves the good donut in place.
+        sys.exit(f"refresh-languages: parsed 0 languages from {card!r}. The upstream "
+                 "summary-card format likely changed — refusing to overwrite the donut "
+                 "with a degenerate 'Other 100%'. Fix parse_card() in this script.")
+    segs = bucket_top3(langs)
     open(OUT, "w").write(render(segs))
     print("languages by commit:", ", ".join(f"{n} {p}%" for n, p in segs))
     print("wrote", OUT)
