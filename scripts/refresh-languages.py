@@ -24,6 +24,9 @@ WORK = [
     ("pyvolr", "Black-Scholes pricing, Greeks &amp; implied vol &#183; Rust core"),
     ("secrets-spotter", "Real-time secret detection &#183; Rust / WASM"),
     ("PINN-DER", "Physics-informed nets with calibrated uncertainty"),
+    # farwatch + farwatch-mobile are one project, shown as a single entry.
+    ("farwatch", "Encrypted terminal mirroring for AI agents &#183; Rust + Flutter"),
+    ("lux", "Menu-bar brightness for every macOS display &#183; native Swift"),
 ]
 
 
@@ -76,17 +79,23 @@ def donut(cx, cy, R, r, segs):
 
 
 def render(segs):
-    cx, cy, R, r = 566, 190, 58, 37
+    cx, R, r = 566, 58, 37
+    n_items = len(WORK)
+
+    # The card grows to fit the work list; the donut and legend stay centred on
+    # that list so the two columns read as one balanced block whatever the count.
+    step = 74 if n_items <= 3 else 60           # tighten the rhythm past 3 entries
+    gap = 30                                     # breathing room above first / below last
+    ys = [58 + gap + 13 + step * i for i in range(n_items)]  # 58 ~ header baseline bottom
+    cy = round((ys[0] + ys[-1]) / 2)
+    height = ys[-1] + 19 + gap
+
     paths = "\n    ".join(f'<path d="{d}" fill="{c}"/>' for d, c in donut(cx, cy, R, r, segs))
     top_name, top_pct = segs[0]
     langdesc = ", ".join(f"{n} {p} percent" for n, p in segs)
     worknames = ", ".join(n for n, _ in WORK)
 
-    # centre the work list vertically on the donut (cy=190) whatever the count
     items = ""
-    n_items = len(WORK)
-    step = 74 if n_items <= 3 else 64
-    ys = [round(190 - step * (n_items - 1) / 2 + step * i) for i in range(n_items)]
     for i, (n, d) in enumerate(WORK):
         y = ys[i]
         items += f'  <text x="48" y="{y}" font-family="{SANS}" font-weight="600" font-size="18" fill="#EDEDED">{n}</text>\n'
@@ -97,15 +106,15 @@ def render(segs):
     legend = ""
     colors = PALETTE + [OTHER]
     for i, (name, pct) in enumerate(segs):
-        y = [154, 180, 206, 232][i]
+        y = cy + [-36, -10, 16, 42][i]          # four rows centred on the donut
         legend += (f'    <rect x="648" y="{y - 10}" width="11" height="11" rx="2.5" fill="{colors[i]}"/>'
                    f'<text x="668" y="{y}" fill="#C9C9CE">{name}</text>'
                    f'<text x="772" y="{y}" text-anchor="end" fill="#7C7C82">{pct}%</text>\n')
 
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="800" height="330" viewBox="0 0 800 330" role="img" aria-label="Selected work: {worknames}. Languages by commit over the last year: {langdesc}.">
-  <rect x="0.75" y="0.75" width="798.5" height="328.5" rx="14" fill="#0A0A0A" stroke="#262229" stroke-width="1.5"/>
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="800" height="{height}" viewBox="0 0 800 {height}" role="img" aria-label="Selected work: {worknames}. Languages by commit over the last year: {langdesc}.">
+  <rect x="0.75" y="0.75" width="798.5" height="{height - 1.5}" rx="14" fill="#0A0A0A" stroke="#262229" stroke-width="1.5"/>
   <text x="48" y="54" font-family="{MONO}" font-size="12" letter-spacing="3.2" fill="#8A8A90">SELECTED WORK</text>
-{items}  <line x1="470" y1="40" x2="470" y2="290" stroke="#221E26" stroke-width="1"/>
+{items}  <line x1="470" y1="40" x2="470" y2="{height - 40}" stroke="#221E26" stroke-width="1"/>
   <text x="502" y="54" font-family="{MONO}" font-size="12" letter-spacing="3.2" fill="#8A8A90">LANGUAGES &#183; BY COMMIT</text>
   <g>
     {paths}

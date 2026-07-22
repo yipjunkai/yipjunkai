@@ -9,6 +9,6 @@
 
 <img src="assets/hero.svg" width="800" alt="Yip Jun Kai — software engineer in San Francisco and Singapore. A relentless builder across AI and full-stack web, Rust systems, cryptography, quant, and ML research." />
 
-<img src="assets/work-languages.svg" width="800" alt="Selected work — pyvolr, secrets-spotter, PINN-DER — and languages by commit over the last year: Rust 52%, TypeScript 25%, Python 21%, other 2%." />
+<img src="assets/work-languages.svg" width="800" alt="Selected work — pyvolr, secrets-spotter, PINN-DER, farwatch, lux — and languages by commit over the last year: Rust 42%, TypeScript 29%, Python 23%, other 6%." />
 
 </div>
